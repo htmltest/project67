@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="js/chosen/chosen.css" />
         <link rel="stylesheet" href="js/jquery-ui-1.11.4.spinner/jquery-ui.css" />
         <link rel="stylesheet" href="js/jscrollpane/jquery.jscrollpane.css" />
+        <link rel="stylesheet" href="js/datatables/datatables.css" />
 
         <script src="js/jquery-2.2.4.min.js"></script>
         <script src="js/chosen/chosen.jquery.min.js"></script>
@@ -18,6 +19,7 @@
         <script src="js/jquery-ui-1.11.4.spinner/jquery-ui.min.js"></script>
         <script src="js/jscrollpane/jquery.mousewheel.js"></script>
         <script src="js/jscrollpane/jquery.jscrollpane.min.js"></script>
+        <script src="js/datatables/datatables.min.js"></script>
         <script src="js/tools.js"></script>
 
         <meta name="viewport" content="width=device-width" />
@@ -40,7 +42,7 @@
                         <div class="top-schedule">Пн–пт &nbsp;&nbsp; 09:00–18:00</div>
 
                         <div class="top-cart active">
-                            <a href="#" class="top-cart-value"><strong>Корзина</strong> <span></span> 5 товаров / 5 000 &#8381;</a>
+                            <a href="#" class="top-cart-value"><strong>Корзина</strong> <span></span> 5 <em>товаров / 5 000 &#8381;</em></a>
                             <div class="top-cart-window">
                                 <!-- basket row -->
                                 <div class="basket-row">
@@ -65,7 +67,10 @@
                                     <div class="basket-row-price"><span>1 500</span> &#8381;</div>
                                 </div>
                                 <!-- basket row END -->
-                                <a href="#" class="top-cart-window-close">Закрыть</a>
+                                <div class="top-cart-links">
+                                    <a href="#" class="top-cart-window-close">Продолжить покупки</a>
+                                    <a href="#" class="top-cart-window-order">Оформить заказ</a>
+                                </div>
                             </div>
                         </div>
 
@@ -82,6 +87,26 @@
                     <div class="menu-add">
                         <a href="#" class="menu-add-link"></a>
                         <ul>
+                            <li><a href="#">Интересно о звуке</a></li>
+                            <li><a href="#">Скачать</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-mobile">
+                        <a href="#" class="menu-mobile-link"></a>
+                        <ul>
+                            <li>
+                                <a href="#">Каталог</a>
+                                <ul>
+                                    <li><a href="#">Комплекты управления звуком</a></li>
+                                    <li><a href="#">Динамики</a></li>
+                                    <li><a href="#">Аксессуары</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Где купить?</a></li>
+                            <li><a href="#">Доставка и оплата</a></li>
                             <li><a href="#">Интересно о звуке</a></li>
                             <li><a href="#">Скачать</a></li>
                             <li><a href="#">Контакты</a></li>
@@ -133,7 +158,7 @@
                                     <div class="doc-icon"><a href="#"><img src="images/pdf.png" alt="" width="40" height="53" /></a></div>
                                     <div class="doc-text">
                                         <div class="doc-title"><a href="#">УСИЛИТЕЛЬ ART SOUND XЕ 752</a></div>
-                                        <div class="doc-descr">Компоновка — вариация на классическую тему. Корпус — цельнотянутое алюминиевое «корыто» симметричного сечения, окрашен в серебристый. Стальные торцевые панели с монтажными лапками оформлены пластиковыми рамками чёрного цвета и выглядят весьма элегантно.</div>
+                                        <div class="doc-descr">Компоновка — вариация на классическую тему. <span>Корпус — цельнотянутое алюминиевое «корыто» симметричного сечения, окрашен в серебристый. Стальные торцевые панели с монтажными лапками оформлены пластиковыми рамками чёрного цвета и выглядят весьма элегантно.</span></div>
                                     </div>
                                     <div class="doc-size">PDF<br />10 МБ</div>
                                 </div>
@@ -141,7 +166,7 @@
                                     <div class="doc-icon"><a href="#"><img src="images/pdf.png" alt="" width="40" height="53" /></a></div>
                                     <div class="doc-text">
                                         <div class="doc-title"><a href="#">УСИЛИТЕЛЬ ART SOUND IX4</a></div>
-                                        <div class="doc-descr">МАСШТАБ Вы, наверное, уже поняли: если под экспонат подложена миллиметровка – значит, вопрос о габаритах будет поднят своевременно и во всей полноте.</div>
+                                        <div class="doc-descr">МАСШТАБ Вы, наверное, уже поняли<span>: если под экспонат подложена миллиметровка – значит, вопрос о габаритах будет поднят своевременно и во всей полноте.</span></div>
                                     </div>
                                     <div class="doc-size">PDF<br />10 МБ</div>
                                 </div>
@@ -149,7 +174,7 @@
                                     <div class="doc-icon"><a href="#"><img src="images/pdf.png" alt="" width="40" height="53" /></a></div>
                                     <div class="doc-text">
                                         <div class="doc-title"><a href="#">УСИЛИТЕЛЬ ART SOUND XЕ 752</a></div>
-                                        <div class="doc-descr">Компоновка — вариация на классическую тему. Корпус — цельнотянутое алюминиевое «корыто» симметричного сечения, окрашен в серебристый. Стальные торцевые панели с монтажными лапками оформлены пластиковыми рамками чёрного цвета и выглядят весьма элегантно.</div>
+                                        <div class="doc-descr">Компоновка — вариация на классическую тему. <span>Корпус — цельнотянутое алюминиевое «корыто» симметричного сечения, окрашен в серебристый. Стальные торцевые панели с монтажными лапками оформлены пластиковыми рамками чёрного цвета и выглядят весьма элегантно.</span></div>
                                     </div>
                                     <div class="doc-size">PDF<br />10 МБ</div>
                                 </div>
@@ -157,7 +182,7 @@
                                     <div class="doc-icon"><a href="#"><img src="images/pdf.png" alt="" width="40" height="53" /></a></div>
                                     <div class="doc-text">
                                         <div class="doc-title"><a href="#">УСИЛИТЕЛЬ ART SOUND IX4</a></div>
-                                        <div class="doc-descr">МАСШТАБ Вы, наверное, уже поняли: если под экспонат подложена миллиметровка – значит, вопрос о габаритах будет поднят своевременно и во всей полноте.</div>
+                                        <div class="doc-descr">МАСШТАБ Вы, наверное, уже поняли<span>: если под экспонат подложена миллиметровка – значит, вопрос о габаритах будет поднят своевременно и во всей полноте.</span></div>
                                     </div>
                                     <div class="doc-size">PDF<br />10 МБ</div>
                                 </div>
@@ -165,7 +190,7 @@
                                     <div class="doc-icon"><a href="#"><img src="images/pdf.png" alt="" width="40" height="53" /></a></div>
                                     <div class="doc-text">
                                         <div class="doc-title"><a href="#">УСИЛИТЕЛЬ ART SOUND XЕ 752</a></div>
-                                        <div class="doc-descr">Компоновка — вариация на классическую тему. Корпус — цельнотянутое алюминиевое «корыто» симметричного сечения, окрашен в серебристый. Стальные торцевые панели с монтажными лапками оформлены пластиковыми рамками чёрного цвета и выглядят весьма элегантно.</div>
+                                        <div class="doc-descr">Компоновка — вариация на классическую тему. <span>Корпус — цельнотянутое алюминиевое «корыто» симметричного сечения, окрашен в серебристый. Стальные торцевые панели с монтажными лапками оформлены пластиковыми рамками чёрного цвета и выглядят весьма элегантно.</span></div>
                                     </div>
                                     <div class="doc-size">PDF<br />10 МБ</div>
                                 </div>
@@ -173,7 +198,7 @@
                                     <div class="doc-icon"><a href="#"><img src="images/pdf.png" alt="" width="40" height="53" /></a></div>
                                     <div class="doc-text">
                                         <div class="doc-title"><a href="#">УСИЛИТЕЛЬ ART SOUND IX4</a></div>
-                                        <div class="doc-descr">МАСШТАБ Вы, наверное, уже поняли: если под экспонат подложена миллиметровка – значит, вопрос о габаритах будет поднят своевременно и во всей полноте.</div>
+                                        <div class="doc-descr">МАСШТАБ Вы, наверное, уже поняли<span>: если под экспонат подложена миллиметровка – значит, вопрос о габаритах будет поднят своевременно и во всей полноте.</span></div>
                                     </div>
                                     <div class="doc-size">PDF<br />10 МБ</div>
                                 </div>
@@ -181,7 +206,7 @@
                                     <div class="doc-icon"><a href="#"><img src="images/pdf.png" alt="" width="40" height="53" /></a></div>
                                     <div class="doc-text">
                                         <div class="doc-title"><a href="#">УСИЛИТЕЛЬ ART SOUND XЕ 752</a></div>
-                                        <div class="doc-descr">Компоновка — вариация на классическую тему. Корпус — цельнотянутое алюминиевое «корыто» симметричного сечения, окрашен в серебристый. Стальные торцевые панели с монтажными лапками оформлены пластиковыми рамками чёрного цвета и выглядят весьма элегантно.</div>
+                                        <div class="doc-descr">Компоновка — вариация на классическую тему. <span>Корпус — цельнотянутое алюминиевое «корыто» симметричного сечения, окрашен в серебристый. Стальные торцевые панели с монтажными лапками оформлены пластиковыми рамками чёрного цвета и выглядят весьма элегантно.</span></div>
                                     </div>
                                     <div class="doc-size">PDF<br />10 МБ</div>
                                 </div>
@@ -189,7 +214,7 @@
                                     <div class="doc-icon"><a href="#"><img src="images/pdf.png" alt="" width="40" height="53" /></a></div>
                                     <div class="doc-text">
                                         <div class="doc-title"><a href="#">УСИЛИТЕЛЬ ART SOUND IX4</a></div>
-                                        <div class="doc-descr">МАСШТАБ Вы, наверное, уже поняли: если под экспонат подложена миллиметровка – значит, вопрос о габаритах будет поднят своевременно и во всей полноте.</div>
+                                        <div class="doc-descr">МАСШТАБ Вы, наверное, уже поняли<span>: если под экспонат подложена миллиметровка – значит, вопрос о габаритах будет поднят своевременно и во всей полноте.</span></div>
                                     </div>
                                     <div class="doc-size">PDF<br />10 МБ</div>
                                 </div>
@@ -204,7 +229,7 @@
                                     <div class="doc-icon"><a href="#"><img src="images/pdf.png" alt="" width="40" height="53" /></a></div>
                                     <div class="doc-text">
                                         <div class="doc-title"><a href="#">УСИЛИТЕЛЬ ART SOUND XЕ 752</a></div>
-                                        <div class="doc-descr">Компоновка — вариация на классическую тему. Корпус — цельнотянутое алюминиевое «корыто» симметричного сечения, окрашен в серебристый. Стальные торцевые панели с монтажными лапками оформлены пластиковыми рамками чёрного цвета и выглядят весьма элегантно.</div>
+                                        <div class="doc-descr">Компоновка — вариация на классическую тему. <span>Корпус — цельнотянутое алюминиевое «корыто» симметричного сечения, окрашен в серебристый. Стальные торцевые панели с монтажными лапками оформлены пластиковыми рамками чёрного цвета и выглядят весьма элегантно.</span></div>
                                     </div>
                                     <div class="doc-size">PDF<br />10 МБ</div>
                                 </div>
@@ -212,7 +237,7 @@
                                     <div class="doc-icon"><a href="#"><img src="images/pdf.png" alt="" width="40" height="53" /></a></div>
                                     <div class="doc-text">
                                         <div class="doc-title"><a href="#">УСИЛИТЕЛЬ ART SOUND IX4</a></div>
-                                        <div class="doc-descr">МАСШТАБ Вы, наверное, уже поняли: если под экспонат подложена миллиметровка – значит, вопрос о габаритах будет поднят своевременно и во всей полноте.</div>
+                                        <div class="doc-descr">МАСШТАБ Вы, наверное, уже поняли<span>: если под экспонат подложена миллиметровка – значит, вопрос о габаритах будет поднят своевременно и во всей полноте.</span></div>
                                     </div>
                                     <div class="doc-size">PDF<br />10 МБ</div>
                                 </div>
@@ -220,7 +245,7 @@
                                     <div class="doc-icon"><a href="#"><img src="images/pdf.png" alt="" width="40" height="53" /></a></div>
                                     <div class="doc-text">
                                         <div class="doc-title"><a href="#">УСИЛИТЕЛЬ ART SOUND XЕ 752</a></div>
-                                        <div class="doc-descr">Компоновка — вариация на классическую тему. Корпус — цельнотянутое алюминиевое «корыто» симметричного сечения, окрашен в серебристый. Стальные торцевые панели с монтажными лапками оформлены пластиковыми рамками чёрного цвета и выглядят весьма элегантно.</div>
+                                        <div class="doc-descr">Компоновка — вариация на классическую тему. <span>Корпус — цельнотянутое алюминиевое «корыто» симметричного сечения, окрашен в серебристый. Стальные торцевые панели с монтажными лапками оформлены пластиковыми рамками чёрного цвета и выглядят весьма элегантно.</span></div>
                                     </div>
                                     <div class="doc-size">PDF<br />10 МБ</div>
                                 </div>
@@ -228,7 +253,7 @@
                                     <div class="doc-icon"><a href="#"><img src="images/pdf.png" alt="" width="40" height="53" /></a></div>
                                     <div class="doc-text">
                                         <div class="doc-title"><a href="#">УСИЛИТЕЛЬ ART SOUND IX4</a></div>
-                                        <div class="doc-descr">МАСШТАБ Вы, наверное, уже поняли: если под экспонат подложена миллиметровка – значит, вопрос о габаритах будет поднят своевременно и во всей полноте.</div>
+                                        <div class="doc-descr">МАСШТАБ Вы, наверное, уже поняли<span>: если под экспонат подложена миллиметровка – значит, вопрос о габаритах будет поднят своевременно и во всей полноте.</span></div>
                                     </div>
                                     <div class="doc-size">PDF<br />10 МБ</div>
                                 </div>
@@ -236,7 +261,7 @@
                                     <div class="doc-icon"><a href="#"><img src="images/pdf.png" alt="" width="40" height="53" /></a></div>
                                     <div class="doc-text">
                                         <div class="doc-title"><a href="#">УСИЛИТЕЛЬ ART SOUND XЕ 752</a></div>
-                                        <div class="doc-descr">Компоновка — вариация на классическую тему. Корпус — цельнотянутое алюминиевое «корыто» симметричного сечения, окрашен в серебристый. Стальные торцевые панели с монтажными лапками оформлены пластиковыми рамками чёрного цвета и выглядят весьма элегантно.</div>
+                                        <div class="doc-descr">Компоновка — вариация на классическую тему. <span>Корпус — цельнотянутое алюминиевое «корыто» симметричного сечения, окрашен в серебристый. Стальные торцевые панели с монтажными лапками оформлены пластиковыми рамками чёрного цвета и выглядят весьма элегантно.</span></div>
                                     </div>
                                     <div class="doc-size">PDF<br />10 МБ</div>
                                 </div>
@@ -244,7 +269,7 @@
                                     <div class="doc-icon"><a href="#"><img src="images/pdf.png" alt="" width="40" height="53" /></a></div>
                                     <div class="doc-text">
                                         <div class="doc-title"><a href="#">УСИЛИТЕЛЬ ART SOUND IX4</a></div>
-                                        <div class="doc-descr">МАСШТАБ Вы, наверное, уже поняли: если под экспонат подложена миллиметровка – значит, вопрос о габаритах будет поднят своевременно и во всей полноте.</div>
+                                        <div class="doc-descr">МАСШТАБ Вы, наверное, уже поняли<span>: если под экспонат подложена миллиметровка – значит, вопрос о габаритах будет поднят своевременно и во всей полноте.</span></div>
                                     </div>
                                     <div class="doc-size">PDF<br />10 МБ</div>
                                 </div>
@@ -252,7 +277,7 @@
                                     <div class="doc-icon"><a href="#"><img src="images/pdf.png" alt="" width="40" height="53" /></a></div>
                                     <div class="doc-text">
                                         <div class="doc-title"><a href="#">УСИЛИТЕЛЬ ART SOUND XЕ 752</a></div>
-                                        <div class="doc-descr">Компоновка — вариация на классическую тему. Корпус — цельнотянутое алюминиевое «корыто» симметричного сечения, окрашен в серебристый. Стальные торцевые панели с монтажными лапками оформлены пластиковыми рамками чёрного цвета и выглядят весьма элегантно.</div>
+                                        <div class="doc-descr">Компоновка — вариация на классическую тему. <span>Корпус — цельнотянутое алюминиевое «корыто» симметричного сечения, окрашен в серебристый. Стальные торцевые панели с монтажными лапками оформлены пластиковыми рамками чёрного цвета и выглядят весьма элегантно.</span></div>
                                     </div>
                                     <div class="doc-size">PDF<br />10 МБ</div>
                                 </div>
@@ -260,7 +285,7 @@
                                     <div class="doc-icon"><a href="#"><img src="images/pdf.png" alt="" width="40" height="53" /></a></div>
                                     <div class="doc-text">
                                         <div class="doc-title"><a href="#">УСИЛИТЕЛЬ ART SOUND IX4</a></div>
-                                        <div class="doc-descr">МАСШТАБ Вы, наверное, уже поняли: если под экспонат подложена миллиметровка – значит, вопрос о габаритах будет поднят своевременно и во всей полноте.</div>
+                                        <div class="doc-descr">МАСШТАБ Вы, наверное, уже поняли<span>: если под экспонат подложена миллиметровка – значит, вопрос о габаритах будет поднят своевременно и во всей полноте.</span></div>
                                     </div>
                                     <div class="doc-size">PDF<br />10 МБ</div>
                                 </div>

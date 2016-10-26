@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="js/chosen/chosen.css" />
         <link rel="stylesheet" href="js/jquery-ui-1.11.4.spinner/jquery-ui.css" />
         <link rel="stylesheet" href="js/jscrollpane/jquery.jscrollpane.css" />
+        <link rel="stylesheet" href="js/datatables/datatables.css" />
 
         <script src="js/jquery-2.2.4.min.js"></script>
         <script src="js/chosen/chosen.jquery.min.js"></script>
@@ -18,6 +19,7 @@
         <script src="js/jquery-ui-1.11.4.spinner/jquery-ui.min.js"></script>
         <script src="js/jscrollpane/jquery.mousewheel.js"></script>
         <script src="js/jscrollpane/jquery.jscrollpane.min.js"></script>
+        <script src="js/datatables/datatables.min.js"></script>
         <script src="js/tools.js"></script>
 
         <meta name="viewport" content="width=device-width" />
@@ -40,7 +42,7 @@
                         <div class="top-schedule">Пн–пт &nbsp;&nbsp; 09:00–18:00</div>
 
                         <div class="top-cart active">
-                            <a href="#" class="top-cart-value"><strong>Корзина</strong> <span></span> 5 товаров / 5 000 &#8381;</a>
+                            <a href="#" class="top-cart-value"><strong>Корзина</strong> <span></span> 5 <em>товаров / 5 000 &#8381;</em></a>
                             <div class="top-cart-window">
                                 <!-- basket row -->
                                 <div class="basket-row">
@@ -65,7 +67,10 @@
                                     <div class="basket-row-price"><span>1 500</span> &#8381;</div>
                                 </div>
                                 <!-- basket row END -->
-                                <a href="#" class="top-cart-window-close">Закрыть</a>
+                                <div class="top-cart-links">
+                                    <a href="#" class="top-cart-window-close">Продолжить покупки</a>
+                                    <a href="#" class="top-cart-window-order">Оформить заказ</a>
+                                </div>
                             </div>
                         </div>
 
@@ -82,6 +87,26 @@
                     <div class="menu-add">
                         <a href="#" class="menu-add-link"></a>
                         <ul>
+                            <li><a href="#">Интересно о звуке</a></li>
+                            <li><a href="#">Скачать</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-mobile">
+                        <a href="#" class="menu-mobile-link"></a>
+                        <ul>
+                            <li>
+                                <a href="#">Каталог</a>
+                                <ul>
+                                    <li><a href="#">Комплекты управления звуком</a></li>
+                                    <li><a href="#">Динамики</a></li>
+                                    <li><a href="#">Аксессуары</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Где купить?</a></li>
+                            <li><a href="#">Доставка и оплата</a></li>
                             <li><a href="#">Интересно о звуке</a></li>
                             <li><a href="#">Скачать</a></li>
                             <li><a href="#">Контакты</a></li>
@@ -144,7 +169,7 @@
 
                             <h1>Усилитель ART SOUND IX4</h1>
                             <div class="article-detail-date">12 октября 2016 года</div>
-                            <p><img src="files/typography.jpg" alt="" style="width:100%" /></p>
+                            <p class="mobile-wide"><img src="files/typography.jpg" alt="" style="width:100%" /></p>
                             <blockquote>Вы, наверное, уже поняли: если под экспонат подложена миллиметровка – значит, вопрос о габаритах будет поднят своевременно и во всей полноте.</blockquote>
                             <p>Точные цифры возникнут на этом экране уже совсем скоро, но пока этого не произошло, поясним на словах: лаконично, но многозначительно названный создателями iX 4 по одному размеру в плане чуть больше планшета iPad Mini (Mini!), по второму – существенно меньше. При том, что это (пока – по документации) полноценный четырёхканальный усилитель. Вот габариты в цифрах и стрелках.</p>
                             <p>Вещь выглядит стильно, трендово и без крикливости: основа корпуса – анодированная прямоугольная труба со скруглёнными углами и вентиляционными щелями на верхней грани, оба конца трубы заткнуты концевыми панелями, тоже похвальным образом нетравматичной формы, отлитыми заодно с крепёжными лапками.</p>

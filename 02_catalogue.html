@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="js/chosen/chosen.css" />
         <link rel="stylesheet" href="js/jquery-ui-1.11.4.spinner/jquery-ui.css" />
         <link rel="stylesheet" href="js/jscrollpane/jquery.jscrollpane.css" />
+        <link rel="stylesheet" href="js/datatables/datatables.css" />
 
         <script src="js/jquery-2.2.4.min.js"></script>
         <script src="js/chosen/chosen.jquery.min.js"></script>
@@ -18,6 +19,7 @@
         <script src="js/jquery-ui-1.11.4.spinner/jquery-ui.min.js"></script>
         <script src="js/jscrollpane/jquery.mousewheel.js"></script>
         <script src="js/jscrollpane/jquery.jscrollpane.min.js"></script>
+        <script src="js/datatables/datatables.min.js"></script>
         <script src="js/tools.js"></script>
 
         <meta name="viewport" content="width=device-width" />
@@ -40,7 +42,7 @@
                         <div class="top-schedule">Пн–пт &nbsp;&nbsp; 09:00–18:00</div>
 
                         <div class="top-cart active">
-                            <a href="#" class="top-cart-value"><strong>Корзина</strong> <span></span> 5 товаров / 5 000 &#8381;</a>
+                            <a href="#" class="top-cart-value"><strong>Корзина</strong> <span></span> 5 <em>товаров / 5 000 &#8381;</em></a>
                             <div class="top-cart-window">
                                 <!-- basket row -->
                                 <div class="basket-row">
@@ -65,7 +67,10 @@
                                     <div class="basket-row-price"><span>1 500</span> &#8381;</div>
                                 </div>
                                 <!-- basket row END -->
-                                <a href="#" class="top-cart-window-close">Закрыть</a>
+                                <div class="top-cart-links">
+                                    <a href="#" class="top-cart-window-close">Продолжить покупки</a>
+                                    <a href="#" class="top-cart-window-order">Оформить заказ</a>
+                                </div>
                             </div>
                         </div>
 
@@ -82,6 +87,26 @@
                     <div class="menu-add">
                         <a href="#" class="menu-add-link"></a>
                         <ul>
+                            <li><a href="#">Интересно о звуке</a></li>
+                            <li><a href="#">Скачать</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-mobile">
+                        <a href="#" class="menu-mobile-link"></a>
+                        <ul>
+                            <li>
+                                <a href="#">Каталог</a>
+                                <ul>
+                                    <li><a href="#">Комплекты управления звуком</a></li>
+                                    <li><a href="#">Динамики</a></li>
+                                    <li><a href="#">Аксессуары</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Где купить?</a></li>
+                            <li><a href="#">Доставка и оплата</a></li>
                             <li><a href="#">Интересно о звуке</a></li>
                             <li><a href="#">Скачать</a></li>
                             <li><a href="#">Контакты</a></li>
@@ -112,6 +137,8 @@
                 <!-- container -->
                 <div class="container">
 
+                    <div class="side-mobile-link"><a href="#"><span>фильтр</span><span>свернуть</span></a></div>
+
                     <!-- side -->
                     <div class="side">
 
@@ -124,6 +151,12 @@
                             </ul>
                         </div>
                         <!-- catalogue menu END -->
+
+                        <div class="catalogue-params">
+                            <div class="catalogue-param">EISSOUND<a href="#"></a></div>
+                            <div class="catalogue-param">Жилые комнаты<a href="#"></a></div>
+                            <div class="catalogue-param">На стену<a href="#"></a></div>
+                        </div>
 
                         <!-- bx filter -->
                         <div class="bx-filter bx-green ">
@@ -512,6 +545,15 @@
                             </div>
                             <!-- catalogue header END -->
 
+                            <form action="#" method="post" class="catalogue-sort-mobile">
+                                <div class="form-select">
+                                    <select name="sort">
+                                        <option value="1">Сортировать по цене</option>
+                                        <option value="2">Сортировать по популярности</option>
+                                    </select>
+                                </div>
+                            </form>
+
                             <div class="catalogue-params">
                                 <div class="catalogue-param">EISSOUND<a href="#"></a></div>
                                 <div class="catalogue-param">Жилые комнаты<a href="#"></a></div>
@@ -691,62 +733,68 @@
                             <p>Контекстная реклама изоморфна времени. Отсюда естественно следует, что социальная ответственность слабо отталкивает бренд. Стимулирование сбыта, отбрасывая подробности, тормозит креативный клиентский спрос, расширяя долю рынка.</p>
                             <h2>Вы смотрели</h2>
 
-                            <!-- catalogue list -->
-                            <div class="catalogue-list">
+                            <!-- mobile recommend -->
+                            <div class="mobile-recommend">
+                                <!-- catalogue list -->
+                                <div class="catalogue-list">
 
-                                <!-- catalogue item -->
-                                <div class="catalogue-item">
-                                    <div class="catalogue-item-inner">
-                                        <div class="catalogue-item-photo"><a href="#"><img src="files/catalogue-01.jpg" alt="" /></a></div>
-                                        <div class="catalogue-item-text">
-                                            <div class="catalogue-item-name"><a href="#">KBSOUND® Select BT 2½”</a></div>
-                                            <div class="catalogue-item-descr">Bluetooth Audio System that allows pairing with any Bluetooth device (iOS & Android). Allows the user to enjoy two music channels...</div>
-                                        </div>
-                                        <div class="catalogue-item-ctrl">
-                                            <div class="catalogue-item-price">1 500 &#8381;</div>
-                                            <div class="catalogue-item-cart"><a href="#"></a></div>
-                                            <div class="catalogue-item-compare"><a href="#"></a></div>
+                                    <!-- catalogue item -->
+                                    <div class="catalogue-item">
+                                        <div class="catalogue-item-inner">
+                                            <div class="catalogue-item-photo"><a href="#"><img src="files/catalogue-01.jpg" alt="" /></a></div>
+                                            <div class="catalogue-item-text">
+                                                <div class="catalogue-item-name"><a href="#">KBSOUND® Select BT 2½”</a></div>
+                                                <div class="catalogue-item-descr">Bluetooth Audio System that allows pairing with any Bluetooth device (iOS & Android). Allows the user to enjoy two music channels...</div>
+                                            </div>
+                                            <div class="catalogue-item-ctrl">
+                                                <div class="catalogue-item-price">1 500 &#8381;</div>
+                                                <div class="catalogue-item-cart"><a href="#"></a></div>
+                                                <div class="catalogue-item-compare"><a href="#"></a></div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <!-- catalogue item END -->
+                                    <!-- catalogue item END -->
 
-                                <!-- catalogue item -->
-                                <div class="catalogue-item">
-                                    <div class="catalogue-item-inner">
-                                        <div class="catalogue-item-photo"><a href="#"><img src="files/catalogue-02.jpg" alt="" /></a></div>
-                                        <div class="catalogue-item-text">
-                                            <div class="catalogue-item-name"><a href="#">KBSOUND® Premium</a></div>
-                                            <div class="catalogue-item-descr">Bluetooth Audio System that allows pairing with any Bluetooth device</div>
-                                        </div>
-                                        <div class="catalogue-item-ctrl">
-                                            <div class="catalogue-item-price">2 999 &#8381;</div>
-                                            <div class="catalogue-item-cart"><a href="#"></a></div>
-                                            <div class="catalogue-item-compare"><a href="#"></a></div>
+                                    <!-- catalogue item -->
+                                    <div class="catalogue-item">
+                                        <div class="catalogue-item-inner">
+                                            <div class="catalogue-item-photo"><a href="#"><img src="files/catalogue-02.jpg" alt="" /></a></div>
+                                            <div class="catalogue-item-text">
+                                                <div class="catalogue-item-name"><a href="#">KBSOUND® Premium</a></div>
+                                                <div class="catalogue-item-descr">Bluetooth Audio System that allows pairing with any Bluetooth device</div>
+                                            </div>
+                                            <div class="catalogue-item-ctrl">
+                                                <div class="catalogue-item-price">2 999 &#8381;</div>
+                                                <div class="catalogue-item-cart"><a href="#"></a></div>
+                                                <div class="catalogue-item-compare"><a href="#"></a></div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <!-- catalogue item END -->
+                                    <!-- catalogue item END -->
 
-                                <!-- catalogue item -->
-                                <div class="catalogue-item">
-                                    <div class="catalogue-item-inner">
-                                        <div class="catalogue-item-photo"><a href="#"><img src="files/catalogue-03.jpg" alt="" /></a></div>
-                                        <div class="catalogue-item-text">
-                                            <div class="catalogue-item-name"><a href="#">KBSOUND® Select FM Radio</a></div>
-                                            <div class="catalogue-item-descr">Enhance your kitchen or bathroom with the wireless stereo KBSOUND® Select FM radio experience. The power supply and tuner installs out of the way ...</div>
-                                        </div>
-                                        <div class="catalogue-item-ctrl">
-                                            <div class="catalogue-item-price">3 899 &#8381;</div>
-                                            <div class="catalogue-item-cart"><a href="#"></a></div>
-                                            <div class="catalogue-item-compare"><a href="#"></a></div>
+                                    <!-- catalogue item -->
+                                    <div class="catalogue-item">
+                                        <div class="catalogue-item-inner">
+                                            <div class="catalogue-item-photo"><a href="#"><img src="files/catalogue-03.jpg" alt="" /></a></div>
+                                            <div class="catalogue-item-text">
+                                                <div class="catalogue-item-name"><a href="#">KBSOUND® Select FM Radio</a></div>
+                                                <div class="catalogue-item-descr">Enhance your kitchen or bathroom with the wireless stereo KBSOUND® Select FM radio experience. The power supply and tuner installs out of the way ...</div>
+                                            </div>
+                                            <div class="catalogue-item-ctrl">
+                                                <div class="catalogue-item-price">3 899 &#8381;</div>
+                                                <div class="catalogue-item-cart"><a href="#"></a></div>
+                                                <div class="catalogue-item-compare"><a href="#"></a></div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <!-- catalogue item END -->
+                                    <!-- catalogue item END -->
 
+                                </div>
+                                <!-- catalogue list END -->
+
+                                <div class="mobile-recommend-ctrl"></div>
                             </div>
-                            <!-- catalogue list END -->
+                            <!-- mobile recommend END -->
 
                         </div>
                     </div>
