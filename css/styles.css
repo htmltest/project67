@@ -47,6 +47,8 @@ thead+tbody tr:last-child td {border-bottom:1px solid #c1d4ec}
 hr {height:1px; width:100%; margin:40px 0; padding:0; border:none; background:#f2ecec}
 blockquote {font-size:20px; font-weight:normal; line-height:25px; padding:3px 0 12px 27px; border-left:3px solid #84a9d9; margin:40px 0}
 
+.rouble {font-family:"PT Sans", sans-serif; font-style:normal}
+
 @media (min-width:1200px) {
     table {width:calc(100% + 30px); margin:30px -15px 50px -15px}
     thead tr:before {content:""; display:table-cell; width:15px}
@@ -238,10 +240,11 @@ label.error {padding:4px 0 0 6px; color:#f00}
 }
 
 .top-cart {float:right; position:relative; width:244px}
-.top-cart-value {background:#d5deea; color:#fff; font-size:12px; line-height:40px; text-transform:uppercase; text-decoration:none; display:block; text-align:center}
+.top-cart-value {background:#d5deea; color:#fff; font-size:12px; line-height:40px; text-transform:uppercase; text-decoration:none; display:block; text-align:center; height:40px}
 .top-cart-value em {font-style:normal}
 .top-cart.active .top-cart-value {background:#84a9d9}
 .top-cart-value span {display:inline-block; vertical-align:middle; width:5px; height:5px; background:#fff; border-radius:3px; margin:-2px 7px 0 3px}
+.top-cart-value .rouble {font-size:13px}
 
 @media (max-width:767px) {
     .top-cart {width:76px}

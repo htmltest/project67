@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <title>La Melodia</title>
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700,700i&amp;subset=cyrillic" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700,700i|PT+Sans:400,400i,700,700i&amp;subset=cyrillic" />
         <link rel="stylesheet" href="css/styles.css" />
         <link rel="stylesheet" href="js/chosen/chosen.css" />
         <link rel="stylesheet" href="js/jquery-ui-1.11.4.spinner/jquery-ui.css" />
@@ -42,7 +42,7 @@
                         <div class="top-schedule">Пн–пт &nbsp;&nbsp; 09:00–18:00</div>
 
                         <div class="top-cart active">
-                            <a href="#" class="top-cart-value"><strong>Корзина</strong> <span></span> 5 <em>товаров / 5 000 &#8381;</em></a>
+                            <a href="#" class="top-cart-value"><strong>Корзина</strong> <span></span> 5 <em>товаров / 5 000 <i class="rouble">&#8381;</i></em></a>
                             <div class="top-cart-window">
                                 <!-- basket row -->
                                 <div class="basket-row">
@@ -52,7 +52,7 @@
                                         <div class="basket-art">Артикул: 40102 </div>
                                     </div>
                                     <div class="basket-row-count-text">х2</div>
-                                    <div class="basket-row-price"><span>800</span> &#8381;</div>
+                                    <div class="basket-row-price"><span>800</span> <i class="rouble">&#8381;</i></div>
                                 </div>
                                 <!-- basket row END -->
 
@@ -64,7 +64,7 @@
                                         <div class="basket-art">Артикул: 40102</div>
                                     </div>
                                     <div class="basket-row-count-text">х1</div>
-                                    <div class="basket-row-price"><span>1 500</span> &#8381;</div>
+                                    <div class="basket-row-price"><span>1 500</span> <i class="rouble">&#8381;</i></div>
                                 </div>
                                 <!-- basket row END -->
                                 <div class="top-cart-links">
@@ -160,7 +160,7 @@
                                             <div class="basket-row-count">
                                                 <div class="form-input"><input type="number" name="count[]" value="2" step="1" min="1" /></div>
                                             </div>
-                                            <div class="basket-row-price"><span>800</span> &#8381;</div>
+                                            <div class="basket-row-price"><span>800</span> <i class="rouble">&#8381;</i></div>
                                             <div class="basket-delete"><a href="#"></a></div>
                                         </div>
                                         <!-- basket row END -->
@@ -175,7 +175,7 @@
                                             <div class="basket-row-count">
                                                 <div class="form-input"><input type="number" name="count[]" value="1" step="1" min="1" /></div>
                                             </div>
-                                            <div class="basket-row-price"><span>1 500</span> &#8381;</div>
+                                            <div class="basket-row-price"><span>1 500</span> <i class="rouble">&#8381;</i></div>
                                             <div class="basket-delete"><a href="#"></a></div>
                                         </div>
                                         <!-- basket row END -->
@@ -185,21 +185,21 @@
                                             <div class="basket-info">
                                                 <div class="basket-info-row">
                                                     <div class="basket-info-title">Стоимость товаров</div>
-                                                    <div class="basket-info-value"><span id="basket-price">3 100</span> &#8381;</div>
+                                                    <div class="basket-info-value"><span id="basket-price">3 100</span> <i class="rouble">&#8381;</i></div>
                                                 </div>
                                                 <div class="basket-info-row">
                                                     <div class="basket-info-title">Доставка</div>
-                                                    <div class="basket-info-value"><span id="basket-delivery">500</span> &#8381;</div>
+                                                    <div class="basket-info-value"><span id="basket-delivery">500</span> <i class="rouble">&#8381;</i></div>
                                                 </div>
                                                 <div class="basket-info-row">
                                                     <div class="basket-info-title">Скидка</div>
-                                                    <div class="basket-info-value"><span id="basket-discount">-2 020</span> &#8381;</div>
+                                                    <div class="basket-info-value"><span id="basket-discount">-2 020</span> <i class="rouble">&#8381;</i></div>
                                                 </div>
                                             </div>
 
                                             <div class="basket-summ">
                                                 <div class="basket-summ-title">Итого</div>
-                                                <div class="basket-summ-value"><span id="basket-summ">900</span> &#8381;</div>
+                                                <div class="basket-summ-value"><span id="basket-summ">900</span> <i class="rouble">&#8381;</i></div>
                                             </div>
                                         </div>
                                         <!-- basket results END -->
@@ -251,8 +251,8 @@
 
                                                     <div class="order-delivery">
                                                         <div class="order-delivery-item" id="delivery-1">Стоимость: бесплатно</div>
-                                                        <div class="order-delivery-item active" id="delivery-2">Сроки доставки: 1-2 дня<br />Стоимость: <span class="delivery-price">500</span> &#8381;<br />Бесплатно от: <span class="delivery-free">5000</span> &#8381;</div>
-                                                        <div class="order-delivery-item" id="delivery-3">Сроки доставки: 3-4 дня<br />Стоимость: <span class="delivery-price">1000</span> &#8381;<br />Бесплатно от: <span class="delivery-free">5000</span> &#8381;</div>
+                                                        <div class="order-delivery-item active" id="delivery-2">Сроки доставки: 1-2 дня<br />Стоимость: <span class="delivery-price">500</span> <i class="rouble">&#8381;</i><br />Бесплатно от: <span class="delivery-free">5000</span> <i class="rouble">&#8381;</i></div>
+                                                        <div class="order-delivery-item" id="delivery-3">Сроки доставки: 3-4 дня<br />Стоимость: <span class="delivery-price">1000</span> <i class="rouble">&#8381;</i><br />Бесплатно от: <span class="delivery-free">5000</span> <i class="rouble">&#8381;</i></div>
                                                     </div>
                                                 </div>
                                             </div>
