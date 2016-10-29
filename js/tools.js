@@ -273,6 +273,14 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $('.bx-filter .checkbox input').change(function() {
+        repositionFilterResults($(this).parents().filter('.bx-filter-param-label'));
+    });
+
+    $('.bx-filter-input-container input').change(function() {
+        repositionFilterResults($(this).parent());
+    });
+
 });
 
 function recalcCart() {
@@ -587,3 +595,10 @@ $(window).resize(function() {
         windowPosition();
     }
 });
+
+function repositionFilterResults(el) {
+    var curTop = el.offset().top - $('.bx-filter').offset().top;
+
+    var curResult = $('.bx-filter-popup-result');
+    curResult.css({'top': curTop + el.height() / 2 - curResult.outerHeight() / 2});
+}

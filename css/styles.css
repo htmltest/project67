@@ -454,11 +454,11 @@ nav ul li.active a {color:#84a9d9; border-color:#84a9d9}
     .catalogue-menu {display:none}
 }
 
-.bx-filter {background:#faf9fc; padding:0 20px 20px 20px}
+.bx-filter {background:#faf9fc; padding:0 20px 20px 20px; position:relative}
 .bx-filter form {margin:0}
 .bx-filter-title {display:none}
 .bx-filter-parameters-box-title {text-transform:uppercase}
-.bx-filter-parameters-box {position:relative; border-top:1px solid #eeebf3; padding:19px 0 20px 0}
+.bx-filter-parameters-box {border-top:1px solid #eeebf3; padding:19px 0 20px 0}
 .bx-filter-parameters-box:first-child {border-top:none}
 .bx-filter .checkbox {padding:10px 0 0 0}
 .bx-filter .checkbox:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
@@ -484,7 +484,7 @@ nav ul li.active a {color:#84a9d9; border-color:#84a9d9}
 
 .bx-filter .bx-filter-popup-result.right {left:100%; margin-left:-33px}
 .bx-filter .bx-filter-popup-result.right {padding-left:6px; padding-right:104px; background:url(../images/result_popup_right.png)}
-.bx-filter .bx-filter-popup-result {color:#828e97; display:none; font-size:12px; text-align:center; width:270px; height:51px; box-sizing:border-box; line-height:37px; padding:6px 0 0 0; top:50%; margin-top:-12px; position:absolute; white-space:nowrap; z-index:10}
+.bx-filter .bx-filter-popup-result {color:#828e97; display:none; font-size:12px; text-align:center; width:270px; height:51px; box-sizing:border-box; line-height:37px; padding:6px 0 0 0; top:0; position:absolute; white-space:nowrap; z-index:10}
 .bx-filter .bx-filter-popup-result br {display:none}
 .bx-filter .bx-filter-popup-result a {display:block; position:absolute; right:7px; top:6px; width:97px; height:37px; font-size:11px; line-height:37px; color:#272c32; text-transform:uppercase; background:#f7ad00; text-align:center; text-decoration:none}
 
