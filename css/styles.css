@@ -454,45 +454,46 @@ nav ul li.active a {color:#84a9d9; border-color:#84a9d9}
     .catalogue-menu {display:none}
 }
 
-.bx-filter {background:#faf9fc; padding:0 20px 20px 20px; position:relative}
-.bx-filter form {margin:0}
-.bx-filter-title {display:none}
-.bx-filter-parameters-box-title {text-transform:uppercase}
-.bx-filter-parameters-box {border-top:1px solid #eeebf3; padding:19px 0 20px 0}
-.bx-filter-parameters-box:first-child {border-top:none}
-.bx-filter .checkbox {padding:10px 0 0 0}
-.bx-filter .checkbox:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
-.bx-filter-parameters-box-container {margin:0 -9px 0 -4px}
-.bx-filter-button-box .bx-filter-parameters-box-container {margin:0}
-.bx-filter .checkbox label {float:left; cursor:pointer; position:relative; color:#828e97}
-.bx-filter .checkbox label:hover {color:#485f70}
-.bx-filter .checkbox input {display:none}
-.bx-filter-param-text {display:block; position:relative; padding:0 9px 0 24px}
-.bx-filter-param-text:before {content:""; display:block; position:absolute; left:4px; top:5px; width:9px; height:9px; border:1px solid #c8cacf; border-radius:2px; background:url(../images/filter-checkbox.png) no-repeat -999px -999px}
-.bx-filter .checkbox label:hover .bx-filter-param-text:before {border-color:#485f70}
-.bx-filter .checkbox input:checked+.bx-filter-param-text {color:#fff; background:#84a9d9; border-radius:2px}
-.bx-filter .checkbox input:checked+.bx-filter-param-text:before {background-position:center; border-color:#84a9d9}
+.bx_filter {background:#faf9fc; padding:0 20px 20px 20px; position:relative}
+.bx_filter form {margin:0}
+.bx_filter_title {display:none}
+.bx_filter_parameters_box_title {text-transform:uppercase}
+.bx_filter_parameters_box {border-top:1px solid #eeebf3; padding:19px 0 20px 0}
+.smartfilter > input+.bx_filter_parameters_box,
+.bx_filter_parameters_box:first-child {border-top:none}
+.bx_filter_parameters_box_container:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.bx_filter .bx_filter_param_label {float:left; clear:left; margin:10px 0 0 0}
+.bx_filter_parameters_box_container {margin:0 -9px 0 -4px}
+.bx_filter_button_box .bx_filter_parameters_box_container {margin:0}
+.bx_filter .bx_filter_input_checkbox {float:left; cursor:pointer; position:relative; color:#828e97}
+.bx_filter .bx_filter_input_checkbox:hover {color:#485f70}
+.bx_filter .bx_filter_input_checkbox input {display:none}
+.bx_filter_param_text {display:block; position:relative; padding:0 9px 0 24px}
+.bx_filter_param_text:before {content:""; display:block; position:absolute; left:4px; top:5px; width:9px; height:9px; border:1px solid #c8cacf; border-radius:2px; background:url(../images/filter-checkbox.png) no-repeat -999px -999px}
+.bx_filter .bx_filter_input_checkbox:hover .bx_filter_param_text:before {border-color:#485f70}
+.bx_filter .bx_filter_input_checkbox input:checked+.bx_filter_param_text {color:#fff; background:#84a9d9; border-radius:2px}
+.bx_filter .bx_filter_input_checkbox input:checked+.bx_filter_param_text:before {background-position:center; border-color:#84a9d9}
 
 @media (max-width:767px) {
-    .bx-filter {font-size:20px; line-height:24px; padding:0 0 20px 0}
-    .bx-filter-parameters-box-title {color:#84a9d9}
-    .bx-filter .checkbox {padding:20px 0 0 0}
-    .bx-filter .checkbox label {color:#485f70}
-    .bx-filter-param-text {padding-left:35px}
-    .bx-filter-param-text:before {width:14px; height:14px; top:4px}
+    .bx_filter {font-size:20px; line-height:24px; padding:0 0 20px 0}
+    .bx_filter_parameters_box_title {color:#84a9d9}
+    .bx_filter .bx_filter_input_checkbox {padding:20px 0 0 0}
+    .bx_filter .bx_filter_input_checkbox label {color:#485f70}
+    .bx_filter_param_text {padding-left:35px}
+    .bx_filter_param_text:before {width:14px; height:14px; top:4px}
 }
 
-.bx-filter .bx-filter-popup-result.right {left:100%; margin-left:-33px}
-.bx-filter .bx-filter-popup-result.right {padding-left:6px; padding-right:104px; background:url(../images/result_popup_right.png)}
-.bx-filter .bx-filter-popup-result {color:#828e97; display:none; font-size:12px; text-align:center; width:270px; height:51px; box-sizing:border-box; line-height:37px; padding:6px 0 0 0; top:0; position:absolute; white-space:nowrap; z-index:10}
-.bx-filter .bx-filter-popup-result br {display:none}
-.bx-filter .bx-filter-popup-result a {display:block; position:absolute; right:7px; top:6px; width:97px; height:37px; font-size:11px; line-height:37px; color:#272c32; text-transform:uppercase; background:#f7ad00; text-align:center; text-decoration:none}
+.bx_filter .bx_filter_popup_result.right {left:100%; margin-left:-33px}
+.bx_filter .bx_filter_popup_result.right {padding-left:6px; padding-right:104px; background:url(../images/result_popup_right.png)}
+.bx_filter .bx_filter_popup_result {color:#828e97; display:none; font-size:12px; text-align:center; width:270px; height:51px; box-sizing:border-box; line-height:37px; padding:6px 0 0 0; top:0; position:absolute; white-space:nowrap; z-index:10}
+.bx_filter .bx_filter_popup_result br {display:none}
+.bx_filter .bx_filter_popup_result a {display:block; position:absolute; right:7px; top:6px; width:97px; height:37px; font-size:11px; line-height:37px; color:#272c32; text-transform:uppercase; background:#f7ad00; text-align:center; text-decoration:none}
 
 @media (max-width:767px) {
-    .bx-filter .bx-filter-popup-result {display:none !important}
+    .bx_filter .bx_filter_popup_result {display:none !important}
 }
 
-#set_filter {display:inline-block; border-radius:3px; background:#84a9d9; margin:37px 0 0 0; padding:0; outline:none; width:100%; border:none; text-decoration:none; height:40px; box-sizing:border-box; color:#fff; text-align:center; text-transform:uppercase; font:13px/40px "Open Sans", sans-serif; -webkit-appearance:none; cursor:pointer}
+#set_filter {display:inline-block; border-radius:3px; background:#84a9d9; margin:7px 0 0 0; padding:0; outline:none; width:100%; border:none; text-decoration:none; height:40px; box-sizing:border-box; color:#fff; text-align:center; text-transform:uppercase; font:13px/40px "Open Sans", sans-serif; -webkit-appearance:none; cursor:pointer}
 #set_filter:hover {background:#7996bb; color:#fff}
 #set_filter:active {background:#657a95; color:#fff}
 
@@ -500,33 +501,32 @@ nav ul li.active a {color:#84a9d9; border-color:#84a9d9}
 #del_filter:hover {border-color:#7996bb; color:#485f70}
 #del_filter:active {border-color:#657a95; color:#485f70}
 
-.bx-ui-slider-part {display:none}
-.bx-filter-parameters-box-container-block.bx-left {float:left; width:68px; padding:7px 0 0 4px}
-.bx-filter-parameters-box-container-block.bx-right {float:right; width:68px; padding:7px 0 0 0; margin:0 9px 0 0}
-.bx-filter .bx-ft-sub {display:none}
-.bx-filter-input-container input  {vertical-align:top; box-sizing:border-box; margin:0; padding:0; text-align:center; outline:none; width:100%; height:29px; border:1px solid #e5dad9; -webkit-appearance:none; color:#333c48; font:13px/27px "Open Sans", sans-serif; border-radius:0}
-.bx-filter-input-container input:hover {border-color:#485f70}
-.bx-filter-input-container input:focus {border-color:#485f70}
-.bx-filter-input-container input::-webkit-input-placeholder {color:#828e97; opacity:1}
-.bx-filter-input-container input::-moz-placeholder {color:#828e97; opacity:1}
-.bx-filter-input-container input:-ms-input-placeholder {color:#828e97; opacity:1}
+.bx_ui_slider_part {display:none}
+.bx_filter_parameters_box_container_block {float:left; width:68px; padding:7px 0 0 4px}
+.bx_filter_parameters_box_container_block+.bx_filter_parameters_box_container_block {float:right; width:68px; padding:7px 0 0 0; margin:0 9px 0 0}
+.bx_filter .bx_ft_sub {display:none}
+.bx_filter_input_container input  {vertical-align:top; box-sizing:border-box; margin:0; padding:0; text-align:center; outline:none; width:100%; height:29px; border:1px solid #e5dad9; -webkit-appearance:none; color:#333c48; font:13px/27px "Open Sans", sans-serif; border-radius:0}
+.bx_filter_input_container input:hover {border-color:#485f70}
+.bx_filter_input_container input:focus {border-color:#485f70}
+.bx_filter_input_container input::-webkit-input-placeholder {color:#828e97; opacity:1}
+.bx_filter_input_container input::-moz-placeholder {color:#828e97; opacity:1}
+.bx_filter_input_container input:-ms-input-placeholder {color:#828e97; opacity:1}
 
-.bx-ui-slider-track-container {float:left; width:calc(100% - 13px); position:relative; margin:13px 0 0 4px}
-.bx-ui-slider-track {height:5px; background:#eeebf3; position:relative}
+.bx_ui_slider_track {float:left; width:calc(100% - 13px); position:relative; margin:13px 0 0 4px; height:5px; background:#eeebf3}
 
-.bx-filter .bx-ui-slider-pricebar-vd {background:#eeebf3}
-.bx-filter .bx-ui-slider-pricebar-vn {background:#eeebf3}
-.bx-filter .bx-ui-slider-pricebar-v {background:#eeebf3}
-.bx-filter .bx-ui-slider-range,
-.bx-filter .bx-ui-slider-pricebar,
-.bx-filter .bx-ui-slider-pricebar-vd,
-.bx-filter .bx-ui-slider-pricebar-vn,
-.bx-filter .bx-ui-slider-pricebar-v {bottom:0; position:absolute; top:0}
-.bx-ui-slider-handle {position:absolute; width:9px; height:16px; top:-6px; cursor:pointer; background:url(../images/slider.png)}
-.bx-ui-slider-handle.left {margin-left:-5px; background-position:left top}
-.bx-ui-slider-handle.left:hover {background-position:left -16px}
-.bx-ui-slider-handle.right {margin-right:-5px; background-position:-9px top}
-.bx-ui-slider-handle.right:hover {background-position:-9px -16px}
+.bx_filter .bx_ui_slider_pricebar_vd {background:#eeebf3}
+.bx_filter .bx_ui_slider_pricebar_vn {background:#eeebf3}
+.bx_filter .bx_ui_slider_pricebar_v {background:#eeebf3}
+.bx_filter .bx_ui_slider_range,
+.bx_filter .bx_ui_slider_pricebar,
+.bx_filter .bx_ui_slider_pricebar_VD,
+.bx_filter .bx_ui_slider_pricebar_VN,
+.bx_filter .bx_ui_slider_pricebar_V {bottom:0; position:absolute; top:0}
+.bx_ui_slider_handle {position:absolute; width:9px; height:16px; top:-6px; cursor:pointer; background:url(../images/slider.png)}
+.bx_ui_slider_handle.left {margin-left:-5px; background-position:left top}
+.bx_ui_slider_handle.left:hover {background-position:left -16px}
+.bx_ui_slider_handle.right {margin-right:-5px; background-position:-9px top}
+.bx_ui_slider_handle.right:hover {background-position:-9px -16px}
 
 .side+.content {margin:0 0 0 300px}
 

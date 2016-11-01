@@ -273,11 +273,11 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
-    $('.bx-filter .checkbox input').change(function() {
-        repositionFilterResults($(this).parents().filter('.bx-filter-param-label'));
+    $('.bx_filter .bx_filter_input_checkbox input').change(function() {
+        repositionFilterResults($(this).parents().filter('.bx_filter_param_label'));
     });
 
-    $('.bx-filter-input-container input').change(function() {
+    $('.bx_filter_input_container input').change(function() {
         repositionFilterResults($(this).parent());
     });
 
@@ -597,8 +597,8 @@ $(window).resize(function() {
 });
 
 function repositionFilterResults(el) {
-    var curTop = el.offset().top - $('.bx-filter').offset().top;
+    var curTop = el.offset().top - $('.bx_filter').offset().top;
 
-    var curResult = $('.bx-filter-popup-result');
+    var curResult = $('.bx_filter_popup_result');
     curResult.css({'top': curTop + el.height() / 2 - curResult.outerHeight() / 2});
 }
