@@ -256,7 +256,7 @@ label.error {padding:4px 0 0 6px; color:#f00}
 .top-cart-window {display:none; z-index:10; width:450px; padding:15px; background:#84a9d9; position:absolute; right:0; top:100%}
 .top-cart.open .top-cart-window {display:block}
 .top-cart-window .basket-row {border-color:#fff; background:#fff}
-.top-cart-window .basket-row-price {width:75px; padding-right:10px}
+.top-cart-window .basket-row-price {width:100px; padding-right:10px}
 .top-cart-links {padding:25px 0 10px 0}
 .top-cart-links:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .top-cart-window-close {float:left; width:183px; font-size:12px; line-height:34px; font-weight:300; height:34px; color:#fff; border:1px solid #fff; border-radius:3px; text-transform:uppercase; background:transparent; text-decoration:none; text-align:center}
@@ -457,6 +457,7 @@ nav ul li.active a {color:#84a9d9; border-color:#84a9d9}
 .bx_filter {background:#faf9fc; padding:0 20px 20px 20px; position:relative}
 .bx_filter form {margin:0}
 .bx_filter_title {display:none}
+.bx_filter_block {opacity:1 !important; height:auto !important}
 .bx_filter_parameters_box_title {text-transform:uppercase}
 .bx_filter_parameters_box {border-top:1px solid #eeebf3; padding:19px 0 20px 0}
 .smartfilter > input+.bx_filter_parameters_box,
@@ -558,7 +559,7 @@ nav ul li.active a {color:#84a9d9; border-color:#84a9d9}
 .basket-art {color:#828e97}
 .basket-row-count {display:table-cell; vertical-align:middle; width:100px; padding:9px 0}
 .basket-row-count-text {display:table-cell; vertical-align:middle; text-align:right; color:#828e97; width:30px; padding:9px 0}
-.basket-row-price {display:table-cell; vertical-align:middle; width:80px; text-align:right; font-size:15px; padding:9px 0}
+.basket-row-price {display:table-cell; vertical-align:middle; width:100px; text-align:right; font-size:15px; padding:9px 0; white-space:nowrap}
 .basket-delete {display:table-cell; vertical-align:middle; width:20px; padding:9px 9px 9px 20px}
 .basket-delete a {display:block; width:18px; height:18px; border:1px solid #eceff0; border-radius:10px; background:url(../images/basket-delete.png) no-repeat center}
 .basket-delete a:hover {border-color:#f7f7f7}
