@@ -343,13 +343,37 @@ function initForm(curForm) {
         curField.removeClass('error');
     });
 
-    curForm.validate({
-        ignore: '',
-        invalidHandler: function(form, validatorcalc) {
-            validatorcalc.showErrors();
-            checkErrors();
-        }
-    });
+    if (curForm.hasClass('ajaxForm')) {
+        curForm.validate({
+            ignore: '',
+            invalidHandler: function(form, validatorcalc) {
+                validatorcalc.showErrors();
+                checkErrors();
+            },
+            submitHandler: function(form, validatorcalc) {
+                $.ajax({
+                    type: 'POST',
+                    url: $(form).attr('action'),
+                    data: $(form).serialize(),
+                    dataType: 'html',
+                    cache: false
+                }).done(function(html) {
+                    if ($('.window').length > 0) {
+                        windowClose();
+                    }
+                    windowOpen(html);
+                });
+            }
+        });
+    } else {
+        curForm.validate({
+            ignore: '',
+            invalidHandler: function(form, validatorcalc) {
+                validatorcalc.showErrors();
+                checkErrors();
+            }
+        });
+    }
 }
 
 function checkErrors() {
