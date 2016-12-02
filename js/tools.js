@@ -128,12 +128,18 @@ $(document).ready(function() {
 
     $('.header-search-link').click(function(e) {
         $('.header-search').toggleClass('open');
+        if ($('.header-search').hasClass('open')) {
+            $('.header-search .form-input input').focus();
+        } else {
+            $('.header-search .form-input input').blur();
+        }
         e.preventDefault();
     });
 
     $(document).click(function(e) {
         if ($(e.target).parents().filter('.header-search').length == 0) {
             $('.header-search').removeClass('open');
+            $('.header-search .form-input input').blur();
         }
     });
 
@@ -279,6 +285,31 @@ $(document).ready(function() {
 
     $('.bx_filter_input_container input').change(function() {
         repositionFilterResults($(this).parent());
+    });
+
+    $('.section-search .form-input input').keyup(function(e) {
+        var curSearch = $(this).val().toLowerCase();
+        if (curSearch == '') {
+            $('.doc').show();
+        } else {
+            $('.doc').each(function() {
+                var curDoc = $(this);
+                var searchResult = false;
+                var curTitle = curDoc.find('.doc-title a').text().toLowerCase();
+                if (curTitle.indexOf(curSearch) != -1) {
+                    searchResult = true;
+                }
+                var curDescr = curDoc.find('.doc-descr').text().toLowerCase();
+                if (curDescr.indexOf(curSearch) != -1) {
+                    searchResult = true;
+                }
+                if (searchResult) {
+                    curDoc.show();
+                } else {
+                    curDoc.hide();
+                }
+            });
+        }
     });
 
 });
@@ -549,6 +580,10 @@ function windowOpen(contentWindow) {
     $('.window-close').click(function(e) {
         windowClose();
         e.preventDefault();
+    });
+
+    $('.window-overlay').click(function() {
+        windowClose();
     });
 
     $('body').bind('keyup', keyUpBody);

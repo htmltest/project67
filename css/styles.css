@@ -850,13 +850,12 @@ nav ul li.active a {color:#84a9d9; border-color:#84a9d9}
 }
 
 .section-search {float:right; clear:right; margin:-53px 0 0 0; width:50%; box-sizing:border-box; padding:0 0 0 15px}
-.section-search form {margin:0; border:1px solid #eceff0; position:relative}
+.section-search-inner {border:1px solid #eceff0; position:relative}
 .section-search .form-input {margin:0 36px 0 15px}
 .section-search .form-input input {border:none; height:41px; line-height:23px; padding-left:0; padding-right:0}
 .section-search .form-input:after {display:none}
 .section-search .form-input label.error {display:none !important}
-.section-search .form-submit {position:absolute; right:12px; top:14px; margin:0}
-.section-search .form-submit input {width:14px; height:14px; background:url(../images/section-search.png); margin:0; padding:0; outline:none; vertical-align:top; border:none; border-radius:0; -webkit-appearance:none; cursor:pointer}
+.section-search-inner:after {content:""; display:block; width:14px; height:14px; position:absolute; right:12px; top:14px; background:url(../images/section-search.png)}
 
 .docs {border-top:2px solid #c1d4ec; margin:30px 0 60px 0}
 .doc {border-bottom:1px solid #f2ecec; display:table; width:100%}
