@@ -289,7 +289,13 @@ $(document).ready(function() {
 
     $('.section-search .form-input input').keyup(function(e) {
         var curSearch = $(this).val().toLowerCase();
-        if (curSearch == '') {
+        $('.doc-title a').find('em').each(function() {
+            $(this).replaceWith($(this).html());
+        });
+        $('.doc-descr').find('em').each(function() {
+            $(this).replaceWith($(this).html());
+        });
+        if (curSearch == '' || curSearch == ' ') {
             $('.docs').each(function() {
                 $(this).show();
                 $(this).prev().show();
@@ -302,10 +308,16 @@ $(document).ready(function() {
                 var curTitle = curDoc.find('.doc-title a').text().toLowerCase();
                 if (curTitle.indexOf(curSearch) != -1) {
                     searchResult = true;
+                    var result = curDoc.find('.doc-title a').text();
+                    result = result.replace(new RegExp(curSearch, 'gi'), '<em>$&</em>');
+                    curDoc.find('.doc-title a').html(result);
                 }
                 var curDescr = curDoc.find('.doc-descr').text().toLowerCase();
                 if (curDescr.indexOf(curSearch) != -1) {
                     searchResult = true;
+                    var result = curDoc.find('.doc-descr').html();
+                    result = result.replace(new RegExp(curSearch, 'gi'), '<em>$&</em>');
+                    curDoc.find('.doc-descr').html(result);
                 }
                 if (searchResult) {
                     curDoc.show();
@@ -322,6 +334,11 @@ $(document).ready(function() {
                     curDocs.prev().hide();
                 }
             });
+            if ($('.docs:visible').length > 0) {
+                $('.docs-empty').hide();
+            } else {
+                $('.docs-empty').show();
+            }
         }
     });
 

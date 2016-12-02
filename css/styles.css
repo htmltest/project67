@@ -864,7 +864,10 @@ nav ul li.active a {color:#84a9d9; border-color:#84a9d9}
 .doc-title {text-transform:uppercase}
 .doc-title a {text-decoration:none}
 .doc-title a:hover {text-decoration:underline}
+.doc-title em {font-style:normal; background:#84a9d9; color:#fff}
+.doc-descr em {font-style:normal; background:#84a9d9; color:#fff}
 .doc-size {display:table-cell; vertical-align:top; width:70px; text-align:center; padding:48px 0 32px 0}
+.docs-empty {display:none}
 
 @media screen and (max-width:767px) {
     .doc-descr span {display:none}
