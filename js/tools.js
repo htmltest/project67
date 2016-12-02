@@ -290,6 +290,10 @@ $(document).ready(function() {
     $('.section-search .form-input input').keyup(function(e) {
         var curSearch = $(this).val().toLowerCase();
         if (curSearch == '') {
+            $('.docs').each(function() {
+                $(this).show();
+                $(this).prev().show();
+            });
             $('.doc').show();
         } else {
             $('.doc').each(function() {
@@ -305,8 +309,17 @@ $(document).ready(function() {
                 }
                 if (searchResult) {
                     curDoc.show();
+                    curDoc.parent().show();
+                    curDoc.parent().prev().show();
                 } else {
                     curDoc.hide();
+                }
+            });
+            $('.docs').each(function() {
+                var curDocs = $(this);
+                if (curDocs.find('.doc:visible').length == 0) {
+                    curDocs.hide();
+                    curDocs.prev().hide();
                 }
             });
         }
