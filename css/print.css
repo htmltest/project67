@@ -50,37 +50,39 @@ nav {display:none}
 
 .product-tabs-menu {display:none}
 
-.product-tab-content {border-top:2px solid #000; margin:40px 0 0 0; padding:0 100px}
+.product-tab-content {border-top:2px solid #000; margin:40px 0 0 0; padding:0 100px; display:block !important}
+.product-tab-content+.product-tab-content+.product-tab-content {display:none !important}
 
 .content-video {display:none}
 
-.content-social {display:none}
+.content-social,
+.pluso {display:none !important}
 
 .mobile-recommend,
 .recommend {display:none}
 
-footer {width:1070x; padding:0 15px; height:180px; margin:-180px 0 0 0; position:relative; background:none}
-.footer-print {display:block; position:absolute; left:0; top:0; width:100%; height:100%}
+footer {width:1070px; padding:0 15px !important; height:180px !important; margin:-180px 0 0 0 !important; position:relative; background:none}
+.footer-print {display:block !important; position:absolute; left:0; top:0; width:100%; height:100%}
 .footer-inner {position:relative; padding:0}
 
 .footer-menu {display:none}
 
 .footer-side {display:none}
 
-.footer-logo {position:absolute; left:15px; top:40px; padding:0}
+.footer-logo {position:absolute; left:15px; top:40px; padding:0 !important}
 .footer-logo img {display:none}
 .footer-logo img.footer-logo-print {display:block}
 
-.footer-phone {position:absolute; left:765px; top:40px; padding:0; color:#000 !important}
-.footer-schedule {position:absolute; left:765px; top:65px; padding:0; color:#000 !important}
-.footer-copyrights {position:absolute; left:15px; bottom:auto; top:120px; padding:0; width:1070px; color:#000 !important}
+.footer-phone {position:absolute; left:765px; top:40px; padding:0 !important; color:#000 !important}
+.footer-schedule {position:absolute; left:765px; top:65px; padding:0 !important; color:#000 !important}
+.footer-copyrights {position:absolute; left:15px; bottom:auto; top:120px; padding:0 !important; width:1070px; color:#000 !important}
 .footer-developer {position:absolute; left:750px; top:0}
 
-.signature-social {display:none}
+.signature-social {display:none !important}
 
 .articles {display:none}
 
-.articles+.content {margin:0}
+.articles+.content {margin:0 !important}
 
 hr {border-top:2px solid #000; background:none}
 
