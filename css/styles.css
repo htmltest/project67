@@ -682,8 +682,12 @@ nav ul li.active a {color:#84a9d9; border-color:#84a9d9}
 .catalogue-item-compare div:before {content:""; display:block; position:absolute; left:0; top:-6px; right:0; height:6px; background:url(../images/blank.gif)}
 .catalogue-item-compare div a {color:#828e97}
 
+.catalogue-item:nth-child(3n) .catalogue-item-compare div {background:url(../images/catalogue-item-compare-right.png); margin-left:-176px}
+
 @media screen and (max-width:1199px) {
     .catalogue-item {width:50%}
+    .catalogue-item:nth-child(3n) .catalogue-item-compare div {background:url(../images/catalogue-item-compare.png); margin-left:-127px}
+    .catalogue-item:nth-child(2n) .catalogue-item-compare div {background:url(../images/catalogue-item-compare-right.png); margin-left:-176px}
 }
 
 @media screen and (max-width:767px) {
@@ -696,6 +700,8 @@ nav ul li.active a {color:#84a9d9; border-color:#84a9d9}
     .catalogue-item-compare > a:hover {background-position:right -13px}
     .catalogue-item.in-compare .catalogue-item-compare > a {background-position:right -26px}
     .catalogue-item-compare div {margin-left:-136px}
+    .catalogue-item:nth-child(3n) .catalogue-item-compare div {margin-left:-136px}
+    .catalogue-item:nth-child(2n) .catalogue-item-compare div {margin-left:-188px}
 }
 
 .product:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
