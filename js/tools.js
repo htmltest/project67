@@ -314,6 +314,7 @@ $(document).ready(function() {
             $('.docs').each(function() {
                 $(this).show();
                 $(this).prev().show();
+                $('.docs-menu a[href="#' + $(this).prev().attr('id') + '"]').parent().show();
             });
             $('.doc').show();
         } else {
@@ -338,6 +339,7 @@ $(document).ready(function() {
                     curDoc.show();
                     curDoc.parent().show();
                     curDoc.parent().prev().show();
+                    $('.docs-menu a[href="#' + curDoc.parent().prev().attr('id') + '"]').parent().show();
                 } else {
                     curDoc.hide();
                 }
@@ -347,6 +349,7 @@ $(document).ready(function() {
                 if (curDocs.find('.doc:visible').length == 0) {
                     curDocs.hide();
                     curDocs.prev().hide();
+                    $('.docs-menu a[href="#' + curDocs.prev().attr('id') + '"]').parent().hide();
                 }
             });
             if ($('.docs:visible').length > 0) {
@@ -357,6 +360,34 @@ $(document).ready(function() {
         }
     });
 
+    $('.docs-menu a').click(function(e) {
+        var curHref = $(this).attr('href');
+        var curBlock = $(curHref);
+        if (curBlock.length > 0) {
+            $.scrollTo(curBlock, 500, {offset: {'top': -$('.docs-menu-inner').height() - 54}});
+        }
+        e.preventDefault();
+    });
+
+});
+
+$(window).on('load resize scroll', function() {
+    var curScroll = $(document).scrollTop();
+    if (curScroll >= $('.docs-menu').offset().top) {
+        $('.docs-menu').addClass('fixed');
+    } else {
+        $('.docs-menu').removeClass('fixed');
+    }
+
+    var curHeight = $(window).height() / 2;
+    $('.docs-menu li.active').removeClass('active');
+    $('.docs-menu a').each(function() {
+        var curBlock = $(this).attr('href');
+        if ($(curBlock).offset().top < (curScroll + curHeight)) {
+            $('.docs-menu li.active').removeClass('active');
+            $(this).parent().addClass('active');
+        }
+    });
 });
 
 function recalcCart() {

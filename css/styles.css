@@ -625,12 +625,12 @@ nav ul li.active a {color:#84a9d9; border-color:#84a9d9}
 .catalogue-header:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .catalogue-header h1 {float:left}
 
-.catalogue-sort {float:right; font-size:12px; padding:4px 0 0 0}
-.catalogue-sort a {float:left; text-decoration:none; margin:0 0 0 33px}
+.catalogue-sort {float:right; font-size:12px; line-height:22px; padding:4px 0 0 0}
+.catalogue-sort a {float:left; text-decoration:none; margin:0 0 0 4px; height:24px; padding:0 10px; border-radius:3px}
 .catalogue-sort a:hover {text-decoration:underline}
 .catalogue-sort a:first-child {margin:0}
-.catalogue-sort a.active {color:#333c48}
-.catalogue-sort a:after {content:""; display:inline-block; vertical-align:middle; width:7px; height:10px; margin:0 0 0 10px; background:url(../images/catalogue-sort.png)}
+.catalogue-sort a.active {color:#fff; background:#84a9d9; font-size:13px}
+.catalogue-sort a:after {content:""; display:inline-block; vertical-align:middle; width:7px; height:10px; margin:0 0 0 9px; background:url(../images/catalogue-sort.png)}
 .catalogue-sort a.down:after {background-position:left top}
 .catalogue-sort a.down.active:after {background-position:-7px top}
 .catalogue-sort a.up:after {background-position:left -10px}
@@ -901,6 +901,15 @@ nav ul li.active a {color:#84a9d9; border-color:#84a9d9}
 @media screen and (max-width:767px) {
     .doc-descr span {display:none}
 }
+
+.docs-menu {text-transform:uppercase; height:38px}
+.docs-menu.fixed .docs-menu-inner {position:fixed; left:0; top:0; right:0; height:60px; z-index:9; background:#fff; box-shadow:0 3px 22px rgba(72, 95, 112, .35)}
+.docs-menu ul {margin:0; padding:18px 0 0 0; list-style:none; max-width:1170px; margin:0 auto}
+.docs-menu ul:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.docs-menu ul li {float:left; margin:0 0 0 30px; padding:0}
+.docs-menu ul li:first-child {margin:0}
+.docs-menu ul li:before {display:none}
+.docs-menu ul li.active a {color:#333c48; text-decoration:none}
 
 .product-tab-content .docs {border-top:none; margin:20px 0}
 .product-tab-content .doc:last-child {border-bottom:none}
