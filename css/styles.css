@@ -1037,7 +1037,7 @@ nav ul li.active a {color:#84a9d9; border-color:#84a9d9}
     .doc-icon {float:left; display:block; padding:28px 0 0 0}
     .doc-text {display:block; margin:0 0 0 70px; padding:22px 0 0 0}
     .doc-title {font-size:20px; line-height:25px}
-    .doc-size {display:block; margin:0 0 0 70px; font-size:12px; color:#828e97; text-align:left; padding:2px 0 0 0}
+    .doc-size {display:block; margin:0 0 0 70px; font-size:12px; color:#828e97; text-align:left; padding:2px 0 0 0; width:auto}
     .doc-size br {display:none}
     .doc-size span {display:inline}
 }
