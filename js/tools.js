@@ -389,16 +389,6 @@ $(window).on('load resize scroll', function() {
         } else {
             $('.docs-menu').removeClass('fixed');
         }
-
-        var curHeight = $(window).height() / 2;
-        $('.docs-menu li.active').removeClass('active');
-        $('.docs-menu a').each(function() {
-            var curBlock = $(this).attr('href');
-            if ($(curBlock).offset().top < (curScroll + curHeight)) {
-                $('.docs-menu li.active').removeClass('active');
-                $(this).parent().addClass('active');
-            }
-        });
     });
 });
 

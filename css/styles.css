@@ -847,7 +847,8 @@ nav ul li.active a {color:#84a9d9; border-color:#84a9d9}
 }
 
 .product-header {display:table; width:100%}
-.product-header h1 {display:table-cell; vertical-align:top; margin:0; padding:1px 0 0 0; text-transform:none; width:100%}
+.product-header-left {display:table-cell; vertical-align:top; width:100%}
+.product-header h1 {margin:0; padding:1px 0 0 0; text-transform:none}
 .product-producer {display:table-cell; vertical-align:top; text-align:center; padding:3px 0 0 30px}
 .product-producer-logo {line-height:0}
 .product-producer-text {color:#828e97; padding:13px 0 0 0}
@@ -1049,7 +1050,6 @@ nav ul li.active a {color:#84a9d9; border-color:#84a9d9}
 .docs-menu ul li {float:left; margin:0 0 0 30px; padding:0}
 .docs-menu ul li:first-child {margin:0}
 .docs-menu ul li:before {display:none}
-.docs-menu ul li.active a {color:#333c48; text-decoration:none}
 
 @media screen and (max-width:767px) {
     .docs-menu {display:none}
@@ -1086,7 +1086,7 @@ nav ul li.active a {color:#84a9d9; border-color:#84a9d9}
 
 @media screen and (max-width:1199px) {
     .slider-text {width:330px}
-    .slider-text-1 {font-size:30px; line-height:30px; padding:40px 0 0 0}
+    .slider-text-1 {font-size:33px; line-height:38px; padding:40px 0 0 0}
     .slider-ctrl {bottom:81px; left:40px; margin:0}
 }
 
