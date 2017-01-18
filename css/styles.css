@@ -137,10 +137,12 @@ blockquote {font-size:20px; font-weight:normal; line-height:25px; padding:3px 0 
     .btn-2 {font-size:15px}
 }
 
-form {margin:40px 0; padding:0}
+.wrapper form,
+.window form {margin:40px 0; padding:0}
 
 @media screen and (max-width:767px) {
-    form {margin:50px 0}
+    .wrapper form,
+    .window form {margin:50px 0}
 }
 
 .form-success {position:relative; text-align:center; background:#f8fdf8; border:1px solid #e5f6e5; padding:17px 30px 21px 30px; margin:40px 0}
