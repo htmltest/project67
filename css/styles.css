@@ -36,15 +36,24 @@ li ol {margin:10px 0}
 li ol li {padding:0 0 0 30px}
 ol li:before {content:counter(point)'.'; counter-increment:point 1; position:absolute; left:0; top:0; color:#84a9d9}
 li ol li:before {content:counter(point)'.'counter(subpoint); counter-increment:subpoint 1; left:0}
-table {width:100%; margin:30px 0 50px 0; border-collapse:collapse}
-th {vertical-align:top; text-align:left; font-weight:normal; font-size:11px; line-height:20px; text-transform:uppercase; padding:0 0 9px 30px; color:#84a9d9}
-th:first-child {padding-left:0}
-td {vertical-align:top; text-align:left; border-top:1px solid #f2ecec; padding:8px 0 11px 30px}
-thead+tbody td {padding-top:18px; padding-bottom:21px}
-td:first-child {padding-left:0}
-tbody tr:first-child td {border-top:none}
-thead+tbody tr:first-child td {border-top:2px solid #c1d4ec}
-thead+tbody tr:last-child td {border-bottom:1px solid #c1d4ec}
+.wrapper table,
+.window table {width:100%; margin:30px 0 50px 0; border-collapse:collapse}
+.wrapper th,
+.window th {vertical-align:top; text-align:left; font-weight:normal; font-size:11px; line-height:20px; text-transform:uppercase; padding:0 0 9px 30px; color:#84a9d9}
+.wrapper th:first-child,
+.window th:first-child {padding-left:0}
+.wrapper td,
+.window td {vertical-align:top; text-align:left; border-top:1px solid #f2ecec; padding:8px 0 11px 30px}
+.wrapper thead+tbody td,
+.window thead+tbody td {padding-top:18px; padding-bottom:21px}
+.wrapper td:first-child,
+.window td:first-child {padding-left:0}
+.wrapper tbody tr:first-child td,
+.window tbody tr:first-child td {border-top:none}
+.wrapper thead+tbody tr:first-child td,
+.window thead+tbody tr:first-child td {border-top:2px solid #c1d4ec}
+.wrapper thead+tbody tr:last-child td,
+.window thead+tbody tr:last-child td {border-bottom:1px solid #c1d4ec}
 hr {height:1px; width:100%; margin:40px 0; padding:0; border:none; background:#f2ecec}
 blockquote {font-size:20px; font-weight:normal; line-height:25px; padding:3px 0 12px 27px; border-left:3px solid #84a9d9; margin:40px 0}
 
@@ -68,12 +77,18 @@ blockquote {font-size:20px; font-weight:normal; line-height:25px; padding:3px 0 
 .rouble {font-family:"PT Sans", sans-serif; font-style:normal}
 
 @media screen and (min-width:1200px) {
-    table {width:calc(100% + 30px); margin:30px -15px 50px -15px}
-    thead tr:before {content:""; display:table-cell; width:15px}
-    thead tr:after {content:""; display:table-cell; width:15px}
-    tbody tr:before {content:""; display:table-cell; width:15px; border-color:#fff}
-    tbody tr:after {content:""; display:table-cell; width:15px; border-color:#fff}
-    tbody tr:hover {background:#f2ecec}
+    .wrapper table,
+    .window table {width:calc(100% + 30px); margin:30px -15px 50px -15px}
+    .wrapper thead tr:before,
+    .window thead tr:before {content:""; display:table-cell; width:15px}
+    .wrapper thead tr:after,
+    .window thead tr:after {content:""; display:table-cell; width:15px}
+    .wrapper tbody tr:before,
+    .window tbody tr:before {content:""; display:table-cell; width:15px; border-color:#fff}
+    .wrapper tbody tr:after,
+    .window tbody tr:after {content:""; display:table-cell; width:15px; border-color:#fff}
+    .wrapper tbody tr:hover,
+    .window tbody tr:hover {background:#f2ecec}
 }
 
 @media screen and (max-width:767px) {
