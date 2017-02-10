@@ -630,6 +630,8 @@ $(window).on('load resize', function() {
         curList.find('.col-quarter:first').css({'margin-left': 0});
     });
 
+    $('.product-photo-big-inner').css({'line-height': $('.product-photo-big-inner').height() + 'px'});
+
 });
 
 function windowOpen(contentWindow) {
