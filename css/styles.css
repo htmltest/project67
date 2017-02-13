@@ -789,23 +789,34 @@ nav ul li.active a {color:#84a9d9; border-color:#84a9d9}
 .catalogue-item-ctrl {padding:30px 11px 11px 11px}
 .catalogue-item-ctrl:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .catalogue-item-price {float:left; font-size:15px; line-height:20px; letter-spacing:0}
-.catalogue-item-cart {float:right; padding:2px 0 0 0}
-.catalogue-item-cart a {display:block; width:36px; height:17px; background:url(../images/in-cart.png)}
-.catalogue-item-cart a:hover {background-position:left -17px}
+.catalogue-item-cart {float:right; margin:2px 0 0 0; position:relative}
+.catalogue-item-cart > a {display:block; width:36px; height:17px; background:url(../images/in-cart.png)}
+.catalogue-item-cart > a:hover {background-position:left -17px}
 .catalogue-item.in-cart .catalogue-item-cart a {background-position:left -34px}
+.catalogue-item-cart div {display:none; position:absolute; left:50%; top:100%; z-index:9; width:272px; height:46px; margin:6px 0 0 -127px; padding:12px 0 0 0; background:url(../images/catalogue-item-compare.png); text-align:center; font-size:12px; line-height:39px; letter-spacing:0; color:#828e97}
+.catalogue-item .catalogue-item-cart:hover div+div {display:block}
+.catalogue-item.in-cart .catalogue-item-cart:hover div {display:block}
+.catalogue-item.in-cart .catalogue-item-cart:hover div+div {display:none}
+.catalogue-item-cart div:before {content:""; display:block; position:absolute; left:0; top:-6px; right:0; height:6px; background:url(../images/blank.gif)}
+.catalogue-item-cart div a {color:#828e97}
 .catalogue-item-compare {float:right; margin:4px 19px 0 0; position:relative}
 .catalogue-item-compare > a {display:block; width:30px; height:13px; background:url(../images/in-compare.png)}
 .catalogue-item-compare > a:hover {background-position:left -13px}
 .catalogue-item.in-compare .catalogue-item-compare > a {background-position:left -26px}
 .catalogue-item-compare div {display:none; position:absolute; left:50%; top:100%; z-index:9; width:272px; height:46px; margin:6px 0 0 -127px; padding:12px 0 0 0; background:url(../images/catalogue-item-compare.png); text-align:center; font-size:12px; line-height:39px; letter-spacing:0; color:#828e97}
+.catalogue-item .catalogue-item-compare:hover div+div {display:block}
 .catalogue-item.in-compare .catalogue-item-compare:hover div {display:block}
+.catalogue-item.in-compare .catalogue-item-compare:hover div+div {display:none}
 .catalogue-item-compare div:before {content:""; display:block; position:absolute; left:0; top:-6px; right:0; height:6px; background:url(../images/blank.gif)}
 .catalogue-item-compare div a {color:#828e97}
 
+.catalogue-item:nth-child(3n) .catalogue-item-cart div {background:url(../images/catalogue-item-compare-right.png); margin-left:-176px}
 .catalogue-item:nth-child(3n) .catalogue-item-compare div {background:url(../images/catalogue-item-compare-right.png); margin-left:-176px}
 
 @media screen and (max-width:1199px) {
     .catalogue-item {width:50%}
+    .catalogue-item:nth-child(3n) .catalogue-item-cart div {background:url(../images/catalogue-item-compare.png); margin-left:-127px}
+    .catalogue-item:nth-child(2n) .catalogue-item-cart div {background:url(../images/catalogue-item-compare-right.png); margin-left:-176px}
     .catalogue-item:nth-child(3n) .catalogue-item-compare div {background:url(../images/catalogue-item-compare.png); margin-left:-127px}
     .catalogue-item:nth-child(2n) .catalogue-item-compare div {background:url(../images/catalogue-item-compare-right.png); margin-left:-176px}
 }
@@ -818,12 +829,15 @@ nav ul li.active a {color:#84a9d9; border-color:#84a9d9}
     .catalogue-item-name {font-size:20px; line-height:25px; padding:27px 0 0 0}
     .catalogue-item-descr {font-size:16px; line-height:25px; padding:13px 0 0 0}
     .catalogue-item-price {font-size:20px}
-    .catalogue-item-cart a {width:44px; height:21px; background:url(../images/in-cart-mobile.png)}
-    .catalogue-item-cart a:hover {background-position:left top}
-    .catalogue-item.in-cart .catalogue-item-cart a {background-position:left -21px}
+    .catalogue-item-cart > a {width:44px; height:21px; background:url(../images/in-cart-mobile.png)}
+    .catalogue-item-cart > a:hover {background-position:left top}
+    .catalogue-item.in-cart .catalogue-item-cart > a {background-position:left -21px}
     .catalogue-item-compare {margin:2px 30px 0 0}
     .catalogue-item-compare > a {width:16px; height:16px; background:url(../images/in-compare-mobile.png)}
     .catalogue-item-compare > a:hover {background-position:left top}
+    .catalogue-item-cart div {margin-left:-136px}
+    .catalogue-item:nth-child(3n) .catalogue-item-cart div {margin-left:-136px}
+    .catalogue-item:nth-child(2n) .catalogue-item-cart div {margin-left:-136px}
     .catalogue-item.in-compare .catalogue-item-compare > a {background-position:left -16px}
     .catalogue-item-compare div {margin-left:-136px}
     .catalogue-item:nth-child(3n) .catalogue-item-compare div {margin-left:-136px}
